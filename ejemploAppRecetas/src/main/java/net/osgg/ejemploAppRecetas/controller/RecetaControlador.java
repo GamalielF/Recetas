@@ -95,7 +95,7 @@ public class RecetaControlador {
 	
 	@PreAuthorize("hasAuthority('admin')")
 	@GetMapping("/update/{id}")
-	public String updateRecipe(@PathVariable("id") Long id, Receta receta, BindingResult result, Model model, @RequestOaram("file") MultipartFile file)
+	public String updateRecipe(@PathVariable("id") Long id, Receta receta, BindingResult result, Model model, @RequestParam("file") MultipartFile file)
 	{
 		if(result.hasErrors())
 		{
